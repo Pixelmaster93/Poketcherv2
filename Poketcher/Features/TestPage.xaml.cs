@@ -1,9 +1,12 @@
+using Poketcher.Features.Base;
+
 namespace Poketcher.Features;
 
-public partial class TestPage : ContentPage
+public partial class TestPage : BasePage
 {
-	public TestPage()
+	public TestPage(TestPageViewModel vm)
 	{
 		InitializeComponent();
+		BindingContext = vm;
 	}
 }

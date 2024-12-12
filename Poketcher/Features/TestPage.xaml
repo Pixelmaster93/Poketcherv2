@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+<views:BasePage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Poketcher.Features.TestPage"
+             xmlns:views="clr-namespace:Poketcher.Features.Base"
+             xmlns:viewmodel="clr-namespace:Poketcher.Features"
+             x:DataType="views:TestPageViewModel"
              Title="TestPage">
     <VerticalStackLayout>
         <Label 
@@ -9,4 +12,4 @@
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
     </VerticalStackLayout>
-</ContentPage>
+</views:BasePage>

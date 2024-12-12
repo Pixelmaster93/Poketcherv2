@@ -3,9 +3,12 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35312.102
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Poketcher", "Poketcher\Poketcher.csproj", "{3D1CCDB9-467B-4198-B8E7-B7F8EF450789}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Poketcher", "Poketcher\Poketcher.csproj", "{3D1CCDB9-467B-4198-B8E7-B7F8EF450789}"
+	ProjectSection(ProjectDependencies) = postProject
+		{957787BC-F3A9-43D3-8F79-E107DF95898E} = {957787BC-F3A9-43D3-8F79-E107DF95898E}
+	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Poketcher.navigation", "Poketcher.navigation\Poketcher.navigation.csproj", "{957787BC-F3A9-43D3-8F79-E107DF95898E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Poketcher.navigation", "Poketcher.navigation\Poketcher.navigation.csproj", "{957787BC-F3A9-43D3-8F79-E107DF95898E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

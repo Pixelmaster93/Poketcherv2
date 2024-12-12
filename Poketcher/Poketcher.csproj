@@ -52,10 +52,13 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Folder Include="Features\Base\" />
+	  <ProjectReference Include="..\Poketcher.navigation\Poketcher.navigation.csproj" />
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="Features\Base\BasePage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Features\TestPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
