@@ -9,7 +9,7 @@
     <Grid RowDefinitions="*,*,*" ColumnDefinitions="*,*" RowSpacing="15" ColumnSpacing="15" Padding="15">
         <Border>
             <Border.GestureRecognizers>
-                <TapGestureRecognizer/>
+                <TapGestureRecognizer Command="{Binding GoToPokemonHomeCommand}" />
             </Border.GestureRecognizers>
             <VerticalStackLayout>
                 <Image Source="pokemon.svg"/>
