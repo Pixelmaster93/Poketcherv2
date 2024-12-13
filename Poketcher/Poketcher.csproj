@@ -34,13 +34,28 @@
 
 		<!-- Images -->
 		<MauiImage Include="Resources\Images\*" />
-		<MauiImage Update="Resources\Images\dotnet_bot.png" Resize="True" BaseSize="300,185" />
+		<MauiImage Update="Resources\Images\giochi.svg" BaseSize="256,256" />
+		<MauiImage Update="Resources\Images\bacche.svg" BaseSize="256,256" />
+		<MauiImage Update="Resources\Images\mosse.svg" BaseSize="256,256" />
+		<MauiImage Update="Resources\Images\oggetti.svg" BaseSize="256,256" />
+		<MauiImage Update="Resources\Images\pokedex.svg" BaseSize="256,256" />
+		<MauiImage Update="Resources\Images\pokemon.svg" BaseSize="256,256" />
+
 
 		<!-- Custom Fonts -->
 		<MauiFont Include="Resources\Fonts\*" />
 
 		<!-- Raw Assets (also remove the "Resources\Raw" prefix) -->
 		<MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Remove="Resources\Images\bacche.svg" />
+	  <None Remove="Resources\Images\giochi.svg" />
+	  <None Remove="Resources\Images\mosse.svg" />
+	  <None Remove="Resources\Images\oggetti.svg" />
+	  <None Remove="Resources\Images\pokedex.svg" />
+	  <None Remove="Resources\Images\pokemon.svg" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -56,10 +71,19 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Update="Features\Pokemon\Home\PokemonHomePage.xaml.cs">
+	    <DependentUpon>PokemonHomePage.xaml</DependentUpon>
+	  </Compile>
+	</ItemGroup>
+
+	<ItemGroup>
 	  <MauiXaml Update="Features\Base\BasePage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Features\TestPage.xaml">
+	  <MauiXaml Update="Features\Home\HomePage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Features\Pokemon\Home\PokemonHomePage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

@@ -3,6 +3,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using Poketcher.Features;
 using Poketcher.Features.Base;
+using Poketcher.Features.Home;
 using Poketcher.navigation.Navigation.Imp;
 using Poketcher.navigation.Navigation.Int;
 
@@ -38,7 +39,7 @@ namespace Poketcher
         }
         private static MauiAppBuilder RegisterPageAndViewModel(this MauiAppBuilder builder)
         {
-            builder.Services.AddTransientWithShellRoute<TestPage, TestPageViewModel>(nameof(TestPage));
+            builder.Services.AddTransientWithShellRoute<HomePage, HomePageViewModel>(nameof(HomePage));
             return builder;
         }
         private static MauiAppBuilder RegisterServices(this MauiAppBuilder builder, IConfiguration configuration)

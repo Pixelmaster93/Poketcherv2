@@ -3,13 +3,13 @@
     x:Class="Poketcher.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:Poketcher.Features"
+    xmlns:local="clr-namespace:Poketcher.Features.Home"
     Shell.FlyoutBehavior="Disabled"
     Title="Poketcher">
 
     <ShellContent
         Title="Home"
-        ContentTemplate="{DataTemplate local:TestPage}"
-        Route="MainPage" />
+        ContentTemplate="{DataTemplate local:HomePage}"
+        Route="HomePage" />
 
 </Shell>
