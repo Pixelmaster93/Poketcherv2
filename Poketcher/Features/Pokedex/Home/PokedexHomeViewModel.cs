@@ -42,6 +42,5 @@ namespace Poketcher.Features.Pokedex.Home
                     break;
             }
         }
-
     }
 }
