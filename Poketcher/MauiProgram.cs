@@ -1,9 +1,9 @@
 ﻿using CommunityToolkit.Maui;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
-using Poketcher.Features;
-using Poketcher.Features.Base;
 using Poketcher.Features.Home;
+using Poketcher.Features.Pokedex.Home;
+using Poketcher.Features.Pokedex.National;
 using Poketcher.navigation.Navigation.Imp;
 using Poketcher.navigation.Navigation.Int;
 
@@ -39,7 +39,9 @@ namespace Poketcher
         }
         private static MauiAppBuilder RegisterPageAndViewModel(this MauiAppBuilder builder)
         {
-            builder.Services.AddTransientWithShellRoute<HomePage, HomePageViewModel>(nameof(HomePage));
+            builder.Services.AddTransientWithShellRoute<HomePage, HomeViewModel>(nameof(HomePage));
+            builder.Services.AddTransientWithShellRoute<PokedexHomePage, PokedexHomeViewModel>(nameof(PokedexHomePage));
+            builder.Services.AddTransientWithShellRoute<PokedexNationalPage, PokedexNationalViewModel>(nameof(PokedexNationalPage));
             return builder;
         }
         private static MauiAppBuilder RegisterServices(this MauiAppBuilder builder, IConfiguration configuration)

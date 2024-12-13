@@ -34,12 +34,13 @@
 
 		<!-- Images -->
 		<MauiImage Include="Resources\Images\*" />
-		<MauiImage Update="Resources\Images\giochi.svg" BaseSize="256,256" />
-		<MauiImage Update="Resources\Images\bacche.svg" BaseSize="256,256" />
-		<MauiImage Update="Resources\Images\mosse.svg" BaseSize="256,256" />
-		<MauiImage Update="Resources\Images\oggetti.svg" BaseSize="256,256" />
+		<MauiImage Update="Resources\Images\games.svg" BaseSize="256,256" />
+		<MauiImage Update="Resources\Images\berry.svg" BaseSize="256,256" />
+		<MauiImage Update="Resources\Images\move.svg" BaseSize="256,256" />
+		<MauiImage Update="Resources\Images\object.svg" BaseSize="256,256" />
 		<MauiImage Update="Resources\Images\pokedex.svg" BaseSize="256,256" />
 		<MauiImage Update="Resources\Images\pokemon.svg" BaseSize="256,256" />
+		<MauiImage Update="Resources\Images\settings.svg" BaseSize="256,256" />
 
 
 		<!-- Custom Fonts -->
@@ -50,10 +51,6 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <None Remove="Resources\Images\bacche.svg" />
-	  <None Remove="Resources\Images\giochi.svg" />
-	  <None Remove="Resources\Images\mosse.svg" />
-	  <None Remove="Resources\Images\oggetti.svg" />
 	  <None Remove="Resources\Images\pokedex.svg" />
 	  <None Remove="Resources\Images\pokemon.svg" />
 	</ItemGroup>
@@ -71,8 +68,8 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Compile Update="Features\Pokemon\Home\PokemonHomePage.xaml.cs">
-	    <DependentUpon>PokemonHomePage.xaml</DependentUpon>
+	  <Compile Update="Features\Pokedex\Home\PokedexHomePage.xaml.cs">
+	    <DependentUpon>PokedexHomePage.xaml</DependentUpon>
 	  </Compile>
 	</ItemGroup>
 
@@ -83,9 +80,29 @@
 	  <MauiXaml Update="Features\Home\HomePage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Features\Pokemon\Home\PokemonHomePage.xaml">
+	  <MauiXaml Update="Features\Pokedex\National\PokedexNationalPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Features\Pokedex\Home\PokedexHomePage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="Features\Moves\" />
+	  <Folder Include="Features\Berries\" />
+	  <Folder Include="Features\Games\" />
+	  <Folder Include="Features\Settings\" />
+	  <Folder Include="Features\Objects\" />
+	  <Folder Include="Features\Pokedex\Kanto\" />
+	  <Folder Include="Features\Pokedex\Joto\" />
+	  <Folder Include="Features\Pokedex\Hoenn\" />
+	  <Folder Include="Features\Pokedex\Sinnoh\" />
+	  <Folder Include="Features\Pokedex\Unima\" />
+	  <Folder Include="Features\Pokedex\Kalos\" />
+	  <Folder Include="Features\Pokedex\Alola\" />
+	  <Folder Include="Features\Pokedex\Galar\" />
+	  <Folder Include="Features\Pokedex\Paldea\" />
 	</ItemGroup>
 
 

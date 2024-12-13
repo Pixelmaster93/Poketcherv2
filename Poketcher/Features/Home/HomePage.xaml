@@ -4,7 +4,7 @@
              x:Class="Poketcher.Features.Home.HomePage"
              xmlns:views="clr-namespace:Poketcher.Features.Base"
              xmlns:viewmodel="clr-namespace:Poketcher.Features.Home"
-             x:DataType="viewmodel:HomePageViewModel"
+             x:DataType="viewmodel:HomeViewModel"
              Title="HomePage">
     <Grid RowDefinitions="*,*,*" ColumnDefinitions="*,*" RowSpacing="15" ColumnSpacing="15" Padding="15">
         <Border>
@@ -12,8 +12,8 @@
                 <TapGestureRecognizer Command="{Binding GoToPokemonHomeCommand}" />
             </Border.GestureRecognizers>
             <VerticalStackLayout>
-                <Image Source="pokemon.svg"/>
-                <Label Text="Pokémon" HorizontalOptions="Center" VerticalOptions="End"/>
+                <Image Source="pokedex.svg"/>
+                <Label Text="Pokèdex" HorizontalOptions="Center" VerticalOptions="End"/>
             </VerticalStackLayout>
         </Border>
         <Border Grid.Column="1">
@@ -21,8 +21,8 @@
                 <TapGestureRecognizer/>
             </Border.GestureRecognizers>
             <VerticalStackLayout>
-                <Image Source="oggetti.svg"/>
-                <Label Text="Oggetti" HorizontalOptions="Center" VerticalOptions="End"/>
+                <Image Source="object.svg"/>
+                <Label Text="Objects" HorizontalOptions="Center" VerticalOptions="End"/>
             </VerticalStackLayout>
         </Border>
         <Border Grid.Row="1">
@@ -30,8 +30,8 @@
                 <TapGestureRecognizer/>
             </Border.GestureRecognizers>
             <VerticalStackLayout>
-                <Image Source="mosse.svg"/>
-                <Label Text="Mosse" HorizontalOptions="Center" VerticalOptions="End"/>
+                <Image Source="move.svg"/>
+                <Label Text="Moves" HorizontalOptions="Center" VerticalOptions="End"/>
             </VerticalStackLayout>
         </Border>
         <Border Grid.Row="1" Grid.Column="1">
@@ -39,8 +39,8 @@
                 <TapGestureRecognizer/>
             </Border.GestureRecognizers>
             <VerticalStackLayout>
-                <Image Source="bacche.svg"/>
-                <Label Text="Bacche" HorizontalOptions="Center" VerticalOptions="End"/>
+                <Image Source="berry.svg"/>
+                <Label Text="Berryes" HorizontalOptions="Center" VerticalOptions="End"/>
             </VerticalStackLayout>
         </Border>
         <Border Grid.Row="2">
@@ -48,8 +48,8 @@
                 <TapGestureRecognizer/>
             </Border.GestureRecognizers>
             <VerticalStackLayout>
-                <Image Source="giochi.svg"/>
-                <Label Text="Giochi" HorizontalOptions="Center" VerticalOptions="End"/>
+                <Image Source="games.svg"/>
+                <Label Text="Games" HorizontalOptions="Center" VerticalOptions="End"/>
             </VerticalStackLayout>
         </Border>
         <Border Grid.Row="2" Grid.Column="1">
@@ -57,8 +57,8 @@
                 <TapGestureRecognizer/>
             </Border.GestureRecognizers>
             <VerticalStackLayout>
-                <Image Source="pokedex.svg"/>
-                <Label Text="Pokèdex" HorizontalOptions="Center" VerticalOptions="End"/>
+                <Image Source="settings.svg"/>
+                <Label Text="Settings" HorizontalOptions="Center" VerticalOptions="End"/>
             </VerticalStackLayout>
         </Border>
     </Grid>

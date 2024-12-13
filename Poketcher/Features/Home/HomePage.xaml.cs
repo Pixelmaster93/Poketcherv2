@@ -4,7 +4,7 @@ namespace Poketcher.Features.Home;
 
 public partial class HomePage : BasePage
 {
-	public HomePage(HomePageViewModel vm)
+	public HomePage(HomeViewModel vm)
 	{
 		InitializeComponent();
 		BindingContext = vm;
