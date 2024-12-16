@@ -1,7 +1,7 @@
 ﻿using CommunityToolkit.Mvvm.Input;
 using Microsoft.Extensions.Logging;
 using Poketcher.Features.Base;
-using Poketcher.Features.Pokedex.Home;
+using Poketcher.Features.Pokedex.PokedexHome;
 using Poketcher.navigation.Navigation.Int;
 
 namespace Poketcher.Features.Home

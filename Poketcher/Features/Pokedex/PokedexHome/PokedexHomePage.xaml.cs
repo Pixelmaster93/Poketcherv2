@@ -1,6 +1,6 @@
 using Poketcher.Features.Base;
 
-namespace Poketcher.Features.Pokedex.Home;
+namespace Poketcher.Features.Pokedex.PokedexHome;
 
 public partial class PokedexHomePage : BasePage
 {

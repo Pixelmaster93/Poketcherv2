@@ -68,7 +68,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Compile Update="Features\Pokedex\Home\PokedexHomePage.xaml.cs">
+	  <Compile Update="Features\Pokedex\PokedexHome\PokedexHomePage.xaml.cs">
 	    <DependentUpon>PokedexHomePage.xaml</DependentUpon>
 	  </Compile>
 	</ItemGroup>
@@ -83,7 +83,7 @@
 	  <MauiXaml Update="Features\Pokedex\National\PokedexNationalPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Features\Pokedex\Home\PokedexHomePage.xaml">
+	  <MauiXaml Update="Features\Pokedex\PokedexHome\PokedexHomePage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

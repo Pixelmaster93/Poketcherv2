@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <views:BasePage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Poketcher.Features.Pokedex.Home.PokedexHomePage"
+             x:Class="Poketcher.Features.Pokedex.PokedexHome.PokedexHomePage"
              xmlns:views="clr-namespace:Poketcher.Features.Base"
-             xmlns:viewmodel="clr-namespace:Poketcher.Features.Pokedex.Home"
+             xmlns:viewmodel="clr-namespace:Poketcher.Features.Pokedex.PokedexHome"
              x:DataType="viewmodel:PokedexHomeViewModel"
              Title="PokemonHomePage">
     <ScrollView>
@@ -26,7 +26,7 @@
                                     <Shadow  Radius="6" Opacity="0.5"/>
                                 </Border.Shadow>
                                 <Border.GestureRecognizers>
-                                    <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:PokedexHomeViewModel}}, Path=GoToPokedexPageCommand}" CommandParameter="{Binding .}" />
+                                    <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:PokedexHomeViewModel}}, Path=GoToPokedexPageCommand}" />
                                 </Border.GestureRecognizers>
                                 <VerticalStackLayout>
                                     <Label Text="{Binding .}" HorizontalOptions="Center" VerticalOptions="Center"/>

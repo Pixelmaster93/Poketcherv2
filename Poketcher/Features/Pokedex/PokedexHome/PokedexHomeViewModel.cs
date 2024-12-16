@@ -6,7 +6,7 @@ using Poketcher.Features.Pokedex.National;
 using Poketcher.navigation.Navigation.Int;
 using System.Collections.ObjectModel;
 
-namespace Poketcher.Features.Pokedex.Home
+namespace Poketcher.Features.Pokedex.PokedexHome
 {
     public partial class PokedexHomeViewModel : BaseViewModel
     {
@@ -26,21 +26,18 @@ namespace Poketcher.Features.Pokedex.Home
         };
 
         public PokedexHomeViewModel(
-            INavigationService navigationService, 
-            ILogger<BaseViewModel> logger, 
+            INavigationService navigationService,
+            ILogger<BaseViewModel> logger,
             IAlertService alertService) : base(navigationService, logger, alertService)
         {
         }
 
         [RelayCommand]
-        public async Task GoToPokedexPage(string region)
+        public async Task GoToPokedexPage()
         {
-            switch (region)
-            {
-                case "National":
-                    await Push<PokedexNationalPage>();
-                    break;
-            }
+
+            await Push<PokedexNationalPage>();
+
         }
     }
 }

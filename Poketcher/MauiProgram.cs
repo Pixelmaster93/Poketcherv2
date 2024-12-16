@@ -2,8 +2,8 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using Poketcher.Features.Home;
-using Poketcher.Features.Pokedex.Home;
 using Poketcher.Features.Pokedex.National;
+using Poketcher.Features.Pokedex.PokedexHome;
 using Poketcher.navigation.Navigation.Imp;
 using Poketcher.navigation.Navigation.Int;
 
@@ -29,10 +29,11 @@ namespace Poketcher
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 })
                 .RegisterPageAndViewModel()
-                .RegisterServices(configuration);
+                .RegisterServices(configuration)
+                .RegisterRoutes();
 
 #if DEBUG
-    		builder.Logging.AddDebug();
+            builder.Logging.AddDebug();
 #endif
 
             return builder.Build();
@@ -48,6 +49,13 @@ namespace Poketcher
         {
             builder.Services.AddSingleton<INavigationService, NavigationService>();
             builder.Services.AddSingleton<IAlertService, AlertService>();
+            return builder;
+        }
+
+        private static MauiAppBuilder RegisterRoutes(this MauiAppBuilder builder)
+        {
+            Routing.RegisterRoute(nameof(PokedexHomePage), typeof(PokedexHomePage));
+            Routing.RegisterRoute(nameof(PokedexNationalPage), typeof(PokedexNationalPage));
             return builder;
         }
     }
