@@ -86,6 +86,9 @@
 	  <MauiXaml Update="Features\Pokedex\PokedexHome\PokedexHomePage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Features\Pokedex\PokemonDetails\PokemonDetailsPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	</ItemGroup>
 
 	<ItemGroup>

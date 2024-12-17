@@ -4,6 +4,7 @@ using Microsoft.Extensions.Logging;
 using Poketcher.Features.Home;
 using Poketcher.Features.Pokedex.National;
 using Poketcher.Features.Pokedex.PokedexHome;
+using Poketcher.Features.Pokedex.PokemonDetails;
 using Poketcher.navigation.Navigation.Imp;
 using Poketcher.navigation.Navigation.Int;
 
@@ -43,6 +44,7 @@ namespace Poketcher
             builder.Services.AddTransientWithShellRoute<HomePage, HomeViewModel>(nameof(HomePage));
             builder.Services.AddTransientWithShellRoute<PokedexHomePage, PokedexHomeViewModel>(nameof(PokedexHomePage));
             builder.Services.AddTransientWithShellRoute<PokedexNationalPage, PokedexNationalViewModel>(nameof(PokedexNationalPage));
+            builder.Services.AddTransientWithShellRoute<PokemonDetailsPage, PokemonDetailsViewModel>(nameof(PokemonDetailsPage));
             return builder;
         }
         private static MauiAppBuilder RegisterServices(this MauiAppBuilder builder, IConfiguration configuration)
@@ -56,6 +58,7 @@ namespace Poketcher
         {
             Routing.RegisterRoute(nameof(PokedexHomePage), typeof(PokedexHomePage));
             Routing.RegisterRoute(nameof(PokedexNationalPage), typeof(PokedexNationalPage));
+            Routing.RegisterRoute(nameof(PokemonDetailsPage), typeof(PokemonDetailsPage));
             return builder;
         }
     }

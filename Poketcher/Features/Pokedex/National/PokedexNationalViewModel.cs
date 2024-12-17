@@ -2,7 +2,7 @@
 using CommunityToolkit.Mvvm.Input;
 using Microsoft.Extensions.Logging;
 using Poketcher.Features.Base;
-using Poketcher.Features.Pokedex.PokedexHome;
+using Poketcher.Features.Pokedex.PokemonDetails;
 using Poketcher.navigation.Navigation.Int;
 using System.Collections.ObjectModel;
 
@@ -74,18 +74,10 @@ namespace Poketcher.Features.Pokedex.National
         }
 
         [RelayCommand]
-        public async Task Back()
+        public async Task GoToPokemonDetails(Pokemon pokemon)
         {
-            try
-            {
-                await Shell.Current.GoToAsync("..");
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Navigation error:{ex.Message}");
-            }
+            await Push<PokemonDetailsPage>(pokemon);
         }
-
     }
 
     public class Pokemon
