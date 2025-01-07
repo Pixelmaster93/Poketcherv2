@@ -1,0 +1,40 @@
+CREATE TABLE moves_targets_descriptions_lang (
+    id INT PRIMARY KEY,
+    description VARCHAR(500) NOT NULL,
+    language_id INT,
+    move_target_id INT,
+    FOREIGN KEY (language_id) REFERENCES languages(id),
+    FOREIGN KEY (move_target_id) REFERENCES moves_targets(id)
+);
+
+
+INSERT INTO moves_targets_descriptions_lang (id, description, language_id, move_target_id) VALUES 
+(1, 'Eine spezifische Fähigkeit. Wie diese Fähigkeit genutzt wird hängt von den genutzten Fähigkeiten ab.', 6, 1),
+(2, 'One specific move. How this move is chosen depends upon on the move being used.', 9, 1),
+(3, 'Ein anderes vom Trainer ausgewähltes Pokémon auf dem Feld. Gestohlene Fähigkeiten nutzen das selbe Ziel.', 6, 2),
+(4, 'One other Pokémon on the field, selected by the trainer. Stolen moves reuse the same target.', 9, 2),
+(5, 'Die Partner des Anwenders (wenn vorhanden).', 6, 3),
+(6, 'The user''s ally (if any).', 9, 3),
+(7, 'Die Seite des Anwenders auf dem Feld. Betrifft den Anwender und seine Partner (wenn vorhanden).', 6, 4),
+(8, 'The user''s side of the field. Affects the user and its ally (if any).', 9, 4),
+(9, 'Entweder der Anwender oder seine Partner. Der Trainer kann es aussuchen.', 6, 5),
+(10, 'Either the user or its ally, selected by the trainer.', 9, 5),
+(11, 'Die andere Seite des Feldes. Betrifft gegnerische Pokémon.', 6, 6),
+(12, 'The opposing side of the field. Affects opposing Pokémon.', 9, 6),
+(13, 'Der Anwender.', 6, 7),
+(14, 'The user.', 9, 7),
+(15, 'Ein zufälliges gegnerische Pokémon.', 6, 8),
+(16, 'One opposing Pokémon, selected at random.', 9, 8),
+(17, 'Jedes andere Pokémon auf dem Feld.', 6, 9),
+(18, 'Every other Pokémon on the field.', 9, 9),
+(19, 'Ein anderes Pokémon auf dem Feld, welches vom Trainer ausgewählt wird.', 6, 10),
+(20, 'One other Pokémon on the field, selected by the trainer.', 9, 10),
+(21, 'Alle gegnerischen Pokémon.', 6, 11),
+(22, 'All opposing Pokémon.', 9, 11),
+(23, 'Das komplette Feld. Betrifft alle Pokémon.', 6, 12),
+(24, 'The entire field. Affects all Pokémon.', 9, 12),
+(25, 'Der Anwender und seine Partner.', 6, 13),
+(26, 'The user and its allies.', 9, 13),
+(27, 'Jedes Pokémon auf dem Feld.', 6, 14),
+(28, 'Every Pokémon on the field.', 9, 14),
+(29, 'All of the user''s allies.', 9, 15);

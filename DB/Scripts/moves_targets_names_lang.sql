@@ -1,0 +1,40 @@
+CREATE TABLE moves_targets_names_lang (
+    id INT PRIMARY KEY,
+    name VARCHAR(50) NOT NULL,
+    language_id INT,
+    move_target_id INT,
+    FOREIGN KEY (language_id) REFERENCES languages(id),
+    FOREIGN KEY (move_target_id) REFERENCES moves_targets(id)
+);
+
+
+INSERT INTO moves_targets_names_lang (id, name, language_id, move_target_id) VALUES 
+(1, 'Spezifische Fähigkeit', 6, 1),
+(2, 'Specific move', 9, 1),
+(3, 'Ausgewähltes Pokémon', 6, 2),
+(4, 'Selected Pokémon', 9, 2),
+(5, 'Partner', 6, 3),
+(6, 'Ally', 9, 3),
+(7, 'Seite des Anwenders', 6, 4),
+(8, 'User''s field', 9, 4),
+(9, 'Anwender oder Partner', 6, 5),
+(10, 'User or ally', 9, 5),
+(11, 'Gegnerisches Feld', 6, 6),
+(12, 'Opponent''s field', 9, 6),
+(13, 'Anwender', 6, 7),
+(14, 'User', 9, 7),
+(15, 'Zufälliger Gegner', 6, 8),
+(16, 'Random opponent', 9, 8),
+(17, 'Alle anderen Pokémon', 6, 9),
+(18, 'All other Pokémon', 9, 9),
+(19, 'Ausgewähltes Pokémon', 6, 10),
+(20, 'Selected Pokémon', 9, 10),
+(21, 'Alle Gegner', 6, 11),
+(22, 'All opponents', 9, 11),
+(23, 'Komplette Feld', 6, 12),
+(24, 'Entire field', 9, 12),
+(25, 'Anwender und Partner', 6, 13),
+(26, 'User and allies', 9, 13),
+(27, 'Jedes Pokémon', 6, 14),
+(28, 'All Pokémon', 9, 14),
+(29, 'All allies', 9, 15);

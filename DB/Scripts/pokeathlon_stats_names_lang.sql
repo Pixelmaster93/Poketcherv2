@@ -1,0 +1,51 @@
+CREATE TABLE pokeathlon_stats_names_lang (
+    id INT PRIMARY KEY,
+    name VARCHAR(25) NOT NULL,
+    language_id INT,
+    pokeathlon_stat_id INT,
+    FOREIGN KEY (language_id) REFERENCES languages(id),
+    FOREIGN KEY (pokeathlon_stat_id) REFERENCES pokeathlon_stats(id)
+);
+
+
+INSERT INTO pokeathlon_stats_names_lang (id, name, language_id, pokeathlon_stat_id) VALUES
+(1, 'スピード', 1, 1),
+(2, '速度', 4, 1),
+(3, 'Vitesse', 5, 1),
+(4, 'Velocidad', 7, 1),
+(5, 'Speed', 9, 1),
+(6, '速度', 12, 1),
+(7, 'パワー', 1, 2),
+(8, '力量', 4, 2),
+(9, 'Force', 5, 2),
+(10, 'Fuerza', 7, 2),
+(11, 'Power', 9, 2),
+(12, '力量', 12, 2),
+(13, 'テクニック', 1, 3),
+(14, '技巧', 4, 3),
+(15, 'Habileté', 5, 3),
+(16, 'Habilidad', 7, 3),
+(17, 'Skill', 9, 3),
+(18, '技巧', 12, 3),
+(19, 'スタミナ', 1, 4),
+(20, '耐力', 4, 4),
+(21, 'Endurance', 5, 4),
+(22, 'Firmeza', 7, 4),
+(23, 'Stamina', 9, 4),
+(24, '耐力', 12, 4),
+(25, 'ジャンプ', 1, 5),
+(26, '跳躍', 4, 5),
+(27, 'Saut', 5, 5),
+(28, 'Salto', 7, 5),
+(29, 'Jump', 9, 5),
+(30, '跳跃', 12, 5),
+(31, 'Geschwindigkeit', 6, 1), -- Tedesco
+(32, 'Kraft', 6, 2),
+(33, 'Fähigkeit', 6, 3),
+(34, 'Ausdauer', 6, 4),
+(35, 'Sprung', 6, 5),
+(36, 'Velocità', 8, 1), -- Italiano
+(37, 'Potenza', 8, 2),
+(38, 'Abilità', 8, 3),
+(39, 'Resistenza', 8, 4),
+(40, 'Salto', 8, 5);

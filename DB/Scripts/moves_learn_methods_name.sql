@@ -1,0 +1,36 @@
+CREATE TABLE moves_learn_methods_name (
+    id INT PRIMARY KEY,
+    name VARCHAR(50) NOT NULL,
+    language_id INT,
+    move_learn_method_id INT,
+    FOREIGN KEY (language_id) REFERENCES languages(id),
+    FOREIGN KEY (move_learn_method_id) REFERENCES moves_learn_methods(id)
+);
+
+INSERT INTO moves_learn_methods_name (id, name, language_id, move_learn_method_id) VALUES 
+(1, "Montée de niveau", 5, 1),
+(2, "Level up", 6, 1),
+(3, "Nivel", 7, 1),
+(4, "Level up", 9, 1),
+(5, "Œuf", 5, 2),
+(6, "Ei", 6, 2),
+(7, "Huevo", 7, 2),
+(8, "Egg", 9, 2),
+(9, "Enseigné", 5, 3),
+(10, "Tutor", 6, 3),
+(11, "Tutor", 7, 3),
+(12, "Tutor", 9, 3),
+(13, "Capsule", 5, 4),
+(14, "Maschine", 6, 4),
+(15, "Máquina", 7, 4),
+(16, "Machine", 9, 4),
+(17, "Stadium: Surfendes Pikachu", 6, 5),
+(18, "Stadium: Surfing Pikachu", 9, 5),
+(19, "Volttackle Pichu", 6, 6),
+(20, "Volt Tackle Pichu", 9, 6),
+(21, "Colosseum: Purification", 9, 7),
+(22, "XD: Shadow", 9, 8),
+(23, "XD: Purification", 9, 9),
+(24, "Rotom Formen", 6, 10),
+(25, "Form Change", 9, 10),
+(26, "Zygarde Cube", 9, 11);

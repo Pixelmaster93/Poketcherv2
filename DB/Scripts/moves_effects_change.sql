@@ -1,0 +1,37 @@
+CREATE TABLE moves_effects_change (
+    id INT PRIMARY KEY,
+    moves_effects_id INT,
+    version_group_id INT,
+    FOREIGN KEY (moves_effects_id) REFERENCES moves_effects(id),
+    FOREIGN KEY (version_group_id) REFERENCES versions_groups(id)
+);
+
+INSERT INTO moves_effects_change (id, moves_effects_id, version_group_id) VALUES 
+(1, 8, 11),
+(2, 18, 3),
+(3, 29, 3),
+(4, 38, 8),
+(5, 46, 3),
+(6, 46, 11),
+(7, 82, 3),
+(8, 84, 3),
+(9, 109, 3),
+(10, 109, 11),
+(11, 146, 3),
+(12, 148, 3),
+(13, 150, 3),
+(14, 151, 3),
+(15, 153, 3),
+(16, 155, 11),
+(17, 156, 3),
+(18, 161, 8),
+(19, 175, 8),
+(20, 180, 11),
+(21, 255, 3),
+(22, 257, 3),
+(23, 261, 8),
+(24, 274, 11),
+(25, 27, 8),
+(26, 224, 11),
+(27, 255, 8),
+(28, 187, 11);

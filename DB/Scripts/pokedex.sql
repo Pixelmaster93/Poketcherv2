@@ -1,0 +1,42 @@
+CREATE TABLE pokedex (
+    id INT PRIMARY KEY,
+    name VARCHAR(50) NOT NULL,
+    is_main_series BOOLEAN,
+    region_id INT,
+    FOREIGN KEY (region_id) REFERENCES regions(id)
+);
+
+
+INSERT INTO pokedex (id, name, is_main_series, region_id) VALUES 
+(1, "national", TRUE, NULL),
+(2, "kanto", TRUE, 1),
+(3, "original-johto", TRUE, 2),
+(4, "hoenn", TRUE, 3),
+(5, "original-sinnoh", TRUE, 4),
+(6, "extended-sinnoh", TRUE, 4),
+(7, "updated-johto", TRUE, 2),
+(8, "original-unova", TRUE, 5),
+(9, "updated-unova", TRUE, 5),
+(11, "conquest-gallery", FALSE, NULL),
+(12, "kalos-central", TRUE, 6),
+(13, "kalos-coastal", TRUE, 6),
+(14, "kalos-mountain", TRUE, 6),
+(15, "updated-hoenn", TRUE, 3),
+(16, "original-alola", TRUE, 7),
+(17, "original-melemele", TRUE, 7),
+(18, "original-akala", TRUE, 7),
+(19, "original-ulaula", TRUE, 7),
+(20, "original-poni", TRUE, 7),
+(21, "updated-alola", TRUE, 7),
+(22, "updated-melemele", TRUE, 7),
+(23, "updated-akala", TRUE, 7),
+(24, "updated-ulaula", TRUE, 7),
+(25, "updated-poni", TRUE, 7),
+(26, "letsgo-kanto", TRUE, 1),
+(27, "galar", TRUE, 8),
+(28, "isle-of-armor", TRUE, 8),
+(29, "crown-tundra", TRUE, 8),
+(30, "hisui", TRUE, 9),
+(31, "paldea", TRUE, 10),
+(32, "kitakami", TRUE, 10),
+(33, "blueberry", TRUE, 10);
