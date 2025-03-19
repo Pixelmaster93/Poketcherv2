@@ -54,7 +54,7 @@
         </Border>
         <Border Grid.Row="2" Grid.Column="1">
             <Border.GestureRecognizers>
-                <TapGestureRecognizer/>
+                <TapGestureRecognizer Command="{Binding GoToSettingsCommand}"/>
             </Border.GestureRecognizers>
             <VerticalStackLayout>
                 <Image Source="settings.svg"/>
