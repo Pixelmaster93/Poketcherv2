@@ -51,8 +51,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiAsset Remove="Resources\Raw\poketcher.db" />
+		<BundleResource Include="Resources\Raw\user.db" />
 	</ItemGroup>
+
 
 	<ItemGroup>
 	  <None Remove="Resources\Images\pokedex.svg" />
@@ -64,6 +65,10 @@
 		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.3.2" />
 		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.3" />
 		<PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="9.0.3" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="9.0.3">
+		  <PrivateAssets>all</PrivateAssets>
+		  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
 		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0" />
@@ -104,6 +109,32 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Folder Include="Dtos\Poketcher\Abilities\" />
+	  <Folder Include="Dtos\Poketcher\Berries\" />
+	  <Folder Include="Dtos\Poketcher\Characteristics\" />
+	  <Folder Include="Dtos\Poketcher\Contests\" />
+	  <Folder Include="Dtos\Poketcher\Eggs\" />
+	  <Folder Include="Dtos\Poketcher\Encounters\" />
+	  <Folder Include="Dtos\Poketcher\Evolutions\" />
+	  <Folder Include="Dtos\Poketcher\Experiences\" />
+	  <Folder Include="Dtos\Poketcher\Genders\" />
+	  <Folder Include="Dtos\Poketcher\Generations\" />
+	  <Folder Include="Dtos\Poketcher\Growths\" />
+	  <Folder Include="Dtos\Poketcher\Items\" />
+	  <Folder Include="Dtos\Poketcher\Languages\" />
+	  <Folder Include="Dtos\Poketcher\Locations\" />
+	  <Folder Include="Dtos\Poketcher\Machines\" />
+	  <Folder Include="Dtos\Poketcher\Moves\" />
+	  <Folder Include="Dtos\Poketcher\Natures\" />
+	  <Folder Include="Dtos\Poketcher\Versions\" />
+	  <Folder Include="Dtos\Poketcher\Types\" />
+	  <Folder Include="Dtos\Poketcher\SuperContests\" />
+	  <Folder Include="Dtos\Poketcher\Stats\" />
+	  <Folder Include="Dtos\Poketcher\Regions\" />
+	  <Folder Include="Dtos\Poketcher\Pokemon\" />
+	  <Folder Include="Dtos\Poketcher\Pokedex\" />
+	  <Folder Include="Dtos\Poketcher\Pokeathlons\" />
+	  <Folder Include="Dtos\Poketcher\Pals\" />
 	  <Folder Include="Features\Moves\" />
 	  <Folder Include="Features\Berries\" />
 	  <Folder Include="Features\Games\" />

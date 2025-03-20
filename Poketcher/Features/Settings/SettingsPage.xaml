@@ -6,7 +6,7 @@
              xmlns:viewmodel ="clr-namespace:Poketcher.Features.Settings"
              x:DataType="viewmodel:SettingsViewModel"
              Title="SettingsPage">
-    <Grid RowDefinitions="*,*" RowSpacing="15">
+    <Grid RowDefinitions="50,50,50,50,*" RowSpacing="15">
         <Border>
             <Border.GestureRecognizers>
                 <TapGestureRecognizer Command="{Binding ExportDatabaseCommand}" />
@@ -23,5 +23,49 @@
                 <Label Text="Import Pokèmon" HorizontalOptions="Center" VerticalOptions="End"/>
             </VerticalStackLayout>
         </Border>
+        <Border Grid.Row="2">
+            <Border.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding PopulateTestDataCommand}" />
+            </Border.GestureRecognizers>
+            <VerticalStackLayout>
+                <Label Text="Import Pokèmon" HorizontalOptions="Center" VerticalOptions="End"/>
+            </VerticalStackLayout>
+        </Border>
+        <Border Grid.Row="3">
+            <Border.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding LoadDatabaseDataCommand}" />
+            </Border.GestureRecognizers>
+            <VerticalStackLayout>
+                <Label Text="Load Pokémon Data" HorizontalOptions="Center" VerticalOptions="End"/>
+            </VerticalStackLayout>
+        </Border>
+
+        <!-- Owned Pokémons -->
+        <VerticalStackLayout Grid.Row="4" Padding="10">
+            <Label Text="Owned Pokémon" FontSize="20" FontAttributes="Bold" />
+            <CollectionView ItemsSource="{Binding OwnedPokemons}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <VerticalStackLayout Padding="5">
+                            <Label Text="{Binding Number}" FontAttributes="Bold" />
+                            <Label Text="{Binding Generation}" />
+                        </VerticalStackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+            <!-- Wanted Pokémons -->
+            <Label Text="Wanted Pokémon" FontSize="20" FontAttributes="Bold" Margin="0,20,0,0" />
+            <CollectionView ItemsSource="{Binding WantedPokemons}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <VerticalStackLayout Padding="5">
+                            <Label Text="{Binding Number}" FontAttributes="Bold" />
+                            <Label Text="{Binding Generation}" />
+                        </VerticalStackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </VerticalStackLayout>
     </Grid>
 </views:BasePage>

@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Poketcher.Entities;
+using Poketcher.Dtos.User;
 
 namespace Poketcher.DBContext
 {
@@ -7,17 +7,33 @@ namespace Poketcher.DBContext
     {
         private readonly string _dbPath;
 
-        public DbSet<WantedPokemon> WantedPokemons { get; set; }
-        public DbSet<OwnedPokemon> OwnedPokemons { get; set; }
-
-        public UserDbContext(string dbPath)
+        public UserDbContext(string dbPath, DbContextOptions<UserDbContext> options) : base(options)
         {
+            if (string.IsNullOrWhiteSpace(dbPath))
+                throw new ArgumentException("Percorso del database non valido.", nameof(dbPath));
+
             _dbPath = dbPath;
         }
 
+        // Tabelle
+        public DbSet<OwnedPokemon> OwnedPokemon { get; set; }
+        public DbSet<WantedPokemon> WantedPokemon { get; set; }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlite($"Data Source={_dbPath}");
+            if (!optionsBuilder.IsConfigured)
+            {
+                optionsBuilder.UseSqlite($"Data Source={_dbPath}");
+            }
+        }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+            // Configurazioni delle entità
+            modelBuilder.Entity<OwnedPokemon>().HasKey(p => p.Id);
+            modelBuilder.Entity<WantedPokemon>().HasKey(p => p.Id);
         }
     }
 }

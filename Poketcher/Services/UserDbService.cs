@@ -1,30 +1,42 @@
-﻿using Poketcher.DBContext;
-
-namespace Poketcher.Services
+﻿namespace Poketcher.Services
 {
     public class UserDbService
     {
-        private readonly string _dbPath;
-
-        public UserDbService()
+        private readonly string _dbFileName = "user.db";
+        public async Task CopyUserDbAsync()
         {
-            _dbPath = Path.Combine(FileSystem.AppDataDirectory, "user.db");
+            string dbPath = GetUserDbPath();
+
+            //if (File.Exists(dbPath))
+            //{
+            //    File.Delete(dbPath);
+            //}
+
+            if (!File.Exists(dbPath)) // Copia solo se il file non esiste
+            {
+                try
+                {
+                    using var stream = await FileSystem.OpenAppPackageFileAsync(_dbFileName);
+                    using var newFile = File.Create(dbPath);
+                    await stream.CopyToAsync(newFile);
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"Errore durante la copia del database: {ex.Message}");
+                }
+            }
         }
 
-        public string GetUserDatabasePath()
+        public string GetUserDbPath()
         {
-            return _dbPath;
+            return Path.Combine(FileSystem.AppDataDirectory, _dbFileName);
         }
 
-        public void EnsureDatabaseCreated()
-        {
-            using var dbContext = new UserDbContext(_dbPath);
-            dbContext.Database.EnsureCreated();
-        }
 
-        public async Task ExportDatabaseAsync(string exportPath)
+
+        public async Task ExportDbAsync(string exportPath)
         {
-            string dbPath = GetUserDatabasePath();
+            string dbPath = GetUserDbPath();
 
             if (File.Exists(dbPath))
             {
@@ -34,9 +46,9 @@ namespace Poketcher.Services
             }
         }
 
-        public async Task ImportDatabaseAsync(string importPath)
+        public async Task ImportDbAsync(string importPath)
         {
-            string dbPath = GetUserDatabasePath();
+            string dbPath = GetUserDbPath();
 
             if (File.Exists(importPath))
             {

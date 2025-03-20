@@ -1,28 +1,35 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Poketcher.Services
+﻿namespace Poketcher.Services
 {
     internal class PokemonDbService
     {
-        public async Task CopyDatabaseAsync()
+        private readonly string _dbFileName = "poketcher.db";
+        public async Task CopyPoketcherDbAsync()
         {
-            string dbPath = Path.Combine(FileSystem.AppDataDirectory, "poketcher.db");
+            string dbPath = GetPoketcherDbPath();
 
-            if (!File.Exists(dbPath))
+            //if (File.Exists(dbPath))
+            //{
+            //    File.Delete(dbPath);
+            //}
+
+            if (!File.Exists(dbPath)) // Copia solo se il file non esiste
             {
-                using var stream = await FileSystem.OpenAppPackageFileAsync("poketcher.db");
-                using var newFile = File.Create(dbPath);
-                await stream.CopyToAsync(newFile);
+                try
+                {
+                    using var stream = await FileSystem.OpenAppPackageFileAsync(_dbFileName);
+                    using var newFile = File.Create(dbPath);
+                    await stream.CopyToAsync(newFile);
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"Errore durante la copia del database: {ex.Message}");
+                }
             }
         }
 
-        public string GetDatabasePath()
+        public string GetPoketcherDbPath()
         {
-            return Path.Combine(FileSystem.AppDataDirectory, "poketcher.db");
+            return Path.Combine(FileSystem.AppDataDirectory, _dbFileName);
         }
     }
 }
