@@ -109,32 +109,21 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Folder Include="Dtos\Poketcher\Abilities\" />
-	  <Folder Include="Dtos\Poketcher\Berries\" />
-	  <Folder Include="Dtos\Poketcher\Characteristics\" />
-	  <Folder Include="Dtos\Poketcher\Contests\" />
-	  <Folder Include="Dtos\Poketcher\Eggs\" />
-	  <Folder Include="Dtos\Poketcher\Encounters\" />
-	  <Folder Include="Dtos\Poketcher\Evolutions\" />
-	  <Folder Include="Dtos\Poketcher\Experiences\" />
-	  <Folder Include="Dtos\Poketcher\Genders\" />
-	  <Folder Include="Dtos\Poketcher\Generations\" />
-	  <Folder Include="Dtos\Poketcher\Growths\" />
-	  <Folder Include="Dtos\Poketcher\Items\" />
-	  <Folder Include="Dtos\Poketcher\Languages\" />
-	  <Folder Include="Dtos\Poketcher\Locations\" />
-	  <Folder Include="Dtos\Poketcher\Machines\" />
-	  <Folder Include="Dtos\Poketcher\Moves\" />
-	  <Folder Include="Dtos\Poketcher\Natures\" />
-	  <Folder Include="Dtos\Poketcher\Versions\" />
-	  <Folder Include="Dtos\Poketcher\Types\" />
-	  <Folder Include="Dtos\Poketcher\SuperContests\" />
-	  <Folder Include="Dtos\Poketcher\Stats\" />
-	  <Folder Include="Dtos\Poketcher\Regions\" />
-	  <Folder Include="Dtos\Poketcher\Pokemon\" />
-	  <Folder Include="Dtos\Poketcher\Pokedex\" />
-	  <Folder Include="Dtos\Poketcher\Pokeathlons\" />
-	  <Folder Include="Dtos\Poketcher\Pals\" />
+	  <Folder Include="Dtos\" />
+	  <Folder Include="Entities\Poketcher\Eggs\" />
+	  <Folder Include="Entities\Poketcher\Encounters\" />
+	  <Folder Include="Entities\Poketcher\Evolutions\" />
+	  <Folder Include="Entities\Poketcher\Experiences\" />
+	  <Folder Include="Entities\Poketcher\Genders\" />
+	  <Folder Include="Entities\Poketcher\Growths\" />
+	  <Folder Include="Entities\Poketcher\Locations\" />
+	  <Folder Include="Entities\Poketcher\Machines\" />
+	  <Folder Include="Entities\Poketcher\Natures\" />
+	  <Folder Include="Entities\Poketcher\SuperContests\" />
+	  <Folder Include="Entities\Poketcher\Pokemon\" />
+	  <Folder Include="Entities\Poketcher\Pokedex\" />
+	  <Folder Include="Entities\Poketcher\Pokeathlons\" />
+	  <Folder Include="Entities\Poketcher\Pals\" />
 	  <Folder Include="Features\Moves\" />
 	  <Folder Include="Features\Berries\" />
 	  <Folder Include="Features\Games\" />

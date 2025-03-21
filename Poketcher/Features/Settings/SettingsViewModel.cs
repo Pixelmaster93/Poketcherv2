@@ -5,7 +5,7 @@ using CommunityToolkit.Mvvm.Input;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using Poketcher.DBContext;
-using Poketcher.Dtos.User;
+using Poketcher.Entities.User;
 using Poketcher.Features.Base;
 using Poketcher.navigation.Navigation.Int;
 using Poketcher.Services;

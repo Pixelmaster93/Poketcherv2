@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Poketcher.Dtos.User;
+using Poketcher.Entities.User;
 
 namespace Poketcher.DBContext
 {
