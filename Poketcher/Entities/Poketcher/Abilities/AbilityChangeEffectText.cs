@@ -4,7 +4,7 @@ using Poketcher.Entities.Poketcher.Languages;
 
 namespace Poketcher.Entities.Poketcher.Abilities
 {
-    public class AbilityChangeEffectTextLang
+    public class AbilityChangeEffectText
     {
         [Key]
         public int Id { get; set; }

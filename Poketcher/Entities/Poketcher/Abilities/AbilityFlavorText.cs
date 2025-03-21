@@ -6,15 +6,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Poketcher.Entities.Poketcher.Languages;
+using Poketcher.Entities.Poketcher.Versions;
 
 namespace Poketcher.Entities.Poketcher.Abilities
 {
-    public class AbilityEffectTextLang
+    public class AbilityFlavorText
     {
         [Key]
         public int Id { get; set; }
-        public string Effect {  get; set; }
-        public string ShortEffect { get; set; }
+        public string FlavorText {  get; set; }
 
         [ForeignKey("Ability")]
         public int AbilityId { get; set; }
@@ -23,5 +23,9 @@ namespace Poketcher.Entities.Poketcher.Abilities
         [ForeignKey("Language")]
         public int LanguageId { get; set; }
         public Language Language { get; set; }
+
+        [ForeignKey("VersionGroup")]
+        public int VersionGroupId { get; set; }
+        public VersionGroup VersionGroup { get; set; }
     }
 }

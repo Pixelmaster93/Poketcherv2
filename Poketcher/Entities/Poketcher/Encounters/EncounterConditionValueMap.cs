@@ -1,0 +1,24 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Poketcher.Entities.Poketcher.Encounters
+{
+    public class EncounterConditionValueMap
+    {
+        [Key]
+        public int Id { get; set; }
+
+        [ForeignKey("Encounter")]
+        public int EncounterId { get; set; }
+        public Encounter Encounter { get; set; }
+
+        [ForeignKey("EncounterConditionValue")]
+        public int EncounterConditionValueId { get; set; }
+        public EncounterConditionValue EncounterConditionValue { get; set; }
+    }
+}

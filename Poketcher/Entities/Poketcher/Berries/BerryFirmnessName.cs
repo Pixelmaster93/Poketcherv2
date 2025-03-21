@@ -6,26 +6,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Poketcher.Entities.Poketcher.Languages;
-using Poketcher.Entities.Poketcher.Versions;
 
-namespace Poketcher.Entities.Poketcher.Abilities
+namespace Poketcher.Entities.Poketcher.Berries
 {
-    public class AbilityFlavorTextLang
+    public class BerryFirmnessName
     {
         [Key]
         public int Id { get; set; }
-        public string FlavorText {  get; set; }
+        public string Name { get; set; }
 
-        [ForeignKey("Ability")]
-        public int AbilityId { get; set; }
-        public Ability Ability { get; set; }
+        [ForeignKey("BerryFirmness")]
+        public int BerryFirmnessId { get; set; }
+        public BerryFirmness BerryFirmness { get; set; }
 
         [ForeignKey("Language")]
         public int LanguageId { get; set; }
         public Language Language { get; set; }
 
-        [ForeignKey("VersionGroup")]
-        public int VersionGroupId { get; set; }
-        public VersionGroup VersionGroup { get; set; }
     }
 }

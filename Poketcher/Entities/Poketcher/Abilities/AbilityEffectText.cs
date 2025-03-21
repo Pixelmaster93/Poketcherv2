@@ -7,17 +7,18 @@ using System.Text;
 using System.Threading.Tasks;
 using Poketcher.Entities.Poketcher.Languages;
 
-namespace Poketcher.Entities.Poketcher.Berries
+namespace Poketcher.Entities.Poketcher.Abilities
 {
-    public class BerryFlavourNameLang
+    public class AbilityEffectText
     {
         [Key]
         public int Id { get; set; }
-        public string Name { get; set; }
+        public string Effect {  get; set; }
+        public string ShortEffect { get; set; }
 
-        [ForeignKey("BerryFlavour")]
-        public int BerryFlavourId { get; set; }
-        public BerryFlavour BerryFlavour { get; set; }
+        [ForeignKey("Ability")]
+        public int AbilityId { get; set; }
+        public Ability Ability { get; set; }
 
         [ForeignKey("Language")]
         public int LanguageId { get; set; }
