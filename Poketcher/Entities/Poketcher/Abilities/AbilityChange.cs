@@ -9,11 +9,9 @@ namespace Poketcher.Entities.Poketcher.Abilities
         [Key]
         public int Id { get; set; }
 
-        [ForeignKey("Ability")]
         public int AbilityId { get; set; }
         public Ability Ability { get; set; }
 
-        [ForeignKey("VersionGroup")]
         public int VersionGroupId { get; set; }
         public VersionGroup VersionGroup { get; set; }
     }

@@ -12,11 +12,9 @@ namespace Poketcher.Entities.Poketcher.Contests
         public string Flavor { get; set; }
         public string Color { get; set; }
 
-        [ForeignKey("ContestType")]
         public int ContestTypeId { get; set; }
         public ContestType ContestType { get; set; }
 
-        [ForeignKey("Language")]
         public int LanguageId { get; set; }
         public Language Language { get; set; }
     }

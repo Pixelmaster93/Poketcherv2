@@ -1,5 +1,4 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Poketcher.Entities.Poketcher.Pokemons
 {
@@ -14,7 +13,6 @@ namespace Poketcher.Entities.Poketcher.Pokemons
         public int BaseExperience { get; set; }
         public bool IdDefault { get; set; }
 
-        [ForeignKey("PokemonSpecies")]
         public int PokemonSpeciesId { get; set; }
         public PokemonSpecies PokemonSpecies { get; set; }
 

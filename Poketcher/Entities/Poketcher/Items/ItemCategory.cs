@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace Poketcher.Entities.Poketcher.Items
 {
@@ -14,7 +8,6 @@ namespace Poketcher.Entities.Poketcher.Items
         public int Id { get; set; }
         public string Name { get; set; }
 
-        [ForeignKey("ItemPocket")]
         public int ItemPocketId { get; set; }
         public ItemPocket ItemPocket { get; set; }
     }

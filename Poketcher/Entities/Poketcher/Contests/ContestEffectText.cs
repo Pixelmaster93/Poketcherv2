@@ -10,11 +10,9 @@ namespace Poketcher.Entities.Poketcher.Contests
         public int Id { get; set; }
         public string Effect { get; set; }
 
-        [ForeignKey("ContestEffect")]
         public int ContestEffectId { get; set; }
         public ContestEffect ContestEffect { get; set; }
 
-        [ForeignKey("Language")]
         public int LanguageId { get; set; }
         public Language Language { get; set; }
     }

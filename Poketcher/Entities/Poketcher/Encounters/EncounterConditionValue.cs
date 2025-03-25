@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace Poketcher.Entities.Poketcher.Encounters
 {
@@ -15,7 +9,6 @@ namespace Poketcher.Entities.Poketcher.Encounters
         public string Name { get; set; }
         public bool IsDefault { get; set; }
 
-        [ForeignKey("EncounterCondition")]
         public int EncounterConditionId { get; set; }
         public EncounterCondition EncounterCondition { get; set; }
 

@@ -9,9 +9,13 @@ namespace Poketcher.Entities.Poketcher.Contests
         [Key]
         public int Id { get; set; }
 
-        [ForeignKey("Move")]
+        [ForeignKey("FirstMove")]
         public int FirstMoveId { get; set; }
+        public Move FirstMove { get; set; }
+
+        [ForeignKey("SecondMove")]
         public int SecondMoveId { get; set; }
-        public Move Move { get; set; }
+        public Move SecondMove { get; set; }
     }
 }
+

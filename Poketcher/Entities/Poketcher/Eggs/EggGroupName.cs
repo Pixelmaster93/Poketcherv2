@@ -10,11 +10,9 @@ namespace Poketcher.Entities.Poketcher.Eggs
         public int Id { get; set; }
         public string Name { get; set; }
 
-        [ForeignKey("EggGroup")]
         public int EggGroupId { get; set; }
         public EggGroup EggGroup { get; set; }
 
-        [ForeignKey("Language")]
         public int LanguageId { get; set; }
         public Language Language { get; set; }
     }

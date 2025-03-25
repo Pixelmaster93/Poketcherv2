@@ -10,11 +10,9 @@ namespace Poketcher.Entities.Poketcher.Berries
         public int Id { get; set; }
         public string Name { get; set; }
 
-        [ForeignKey("BerryFlavour")]
         public int BerryFlavourId { get; set; }
         public BerryFlavour BerryFlavour { get; set; }
 
-        [ForeignKey("Language")]
         public int LanguageId { get; set; }
         public Language Language { get; set; }
     }
