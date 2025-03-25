@@ -110,8 +110,6 @@
 
 	<ItemGroup>
 	  <Folder Include="Dtos\" />
-	  <Folder Include="Entities\Poketcher\Experiences\" />
-	  <Folder Include="Entities\Poketcher\Genders\" />
 	  <Folder Include="Entities\Poketcher\Machines\" />
 	  <Folder Include="Entities\Poketcher\Natures\" />
 	  <Folder Include="Entities\Poketcher\Pokedex\" />
