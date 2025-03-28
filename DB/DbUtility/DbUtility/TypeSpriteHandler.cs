@@ -1,12 +1,11 @@
 ﻿using System.Data.SQLite;
 using DbUtility;
 
-
 public class TypeSpriteHandler
 {
     public static void AddTypeSprites(DatabaseManager dbManager)
     {
-        Console.WriteLine("Insert TypeSprites base directory:");
+        Console.WriteLine("\nInsert TypeSprites base directory:");
         string basePath = Console.ReadLine().Trim();
 
         using (var connection = dbManager.GetConnection())

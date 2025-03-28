@@ -5,7 +5,7 @@ public class CryHandler
 {
     public static void AddCries(DatabaseManager dbManager)
     {
-        Console.WriteLine("Insert latest Cry directory:");
+        Console.WriteLine("\nInsert latest Cry directory:");
         string latestDir = Console.ReadLine().Trim();
         Console.WriteLine("Insert legacy Cry directory:");
         string legacyDir = Console.ReadLine().Trim();

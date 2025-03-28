@@ -1,4 +1,6 @@
-﻿class Program
+﻿using DbUtility;
+
+class Program
 {
     static void Main()
     {
@@ -19,11 +21,11 @@
             {
                 Console.WriteLine("\nYou want test or update? (T = Test, U = Update)");
 
-                choice = (Console.ReadKey(true)).KeyChar.ToString().ToUpper();
+                choice = (Console.ReadKey()).KeyChar.ToString().ToUpper();
                 if (choice == "T")
                 {
                     Console.WriteLine("\nWhat do you want to test? (C = Cries, T = TypeSprites)");
-                    choice = (Console.ReadKey(true)).KeyChar.ToString().ToUpper();
+                    choice = (Console.ReadKey()).KeyChar.ToString().ToUpper();
 
                     if (choice == "C")
                     {
@@ -42,8 +44,8 @@
                 }
                 else if (choice == "U")
                 {
-                    Console.WriteLine("\nWhat do you want to update? (C = Cries, T = TypeSprites)");
-                    choice = (Console.ReadKey(true)).KeyChar.ToString().ToUpper();
+                    Console.WriteLine("\nWhat do you want to update? (C = Cries, T = TypeSprites, P = PokemonSprites)");
+                    choice = (Console.ReadKey()).KeyChar.ToString().ToUpper();
 
                     if (choice == "C")
                     {
@@ -53,6 +55,11 @@
                     else if (choice == "T")
                     {
                         TypeSpriteHandler.AddTypeSprites(dbManager);
+                        break;
+                    }
+                    else if (choice == "P")
+                    {
+                        PokemonHandler.AddPokemonToPokemonSprites(dbManager);
                         break;
                     }
                     else
