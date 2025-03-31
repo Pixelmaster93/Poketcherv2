@@ -8,10 +8,11 @@
             double progressPercentage = (double)processed / total;
             int filledBars = (int)(progressPercentage * progressBarWidth);
 
-            Console.Write("\r[");
+            Console.Write("\r["); // Usa "\r" per riscrivere sulla stessa riga
             Console.Write(new string('=', filledBars));
             Console.Write(new string(' ', progressBarWidth - filledBars));
             Console.Write($"] {progressPercentage * 100:0.00}%");
         }
+
     }
 }

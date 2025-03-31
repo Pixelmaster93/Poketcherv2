@@ -8,7 +8,7 @@ class Program
 
 
         Console.WriteLine("Insert poketcher.db directory:");
-        string path = Console.ReadLine();
+        string path = @"C:\Poketcher\Poketcherv2\DB";//Console.ReadLine();
         string dbPath = System.IO.Path.Combine(path, "poketcher.db");
 
 
@@ -59,8 +59,24 @@ class Program
                     }
                     else if (choice == "P")
                     {
-                        PokemonHandler.AddPokemonToPokemonSprites(dbManager);
-                        break;
+                        Console.WriteLine("\nWhat do you want to update? (S = Spries, T = Table)");
+                        choice = (Console.ReadKey()).KeyChar.ToString().ToUpper();
+
+                        if (choice == "S")
+                        {
+                            PokemonHandler.UpdatePokemonSprites(dbManager);
+                            break;
+                        }
+                        else if (choice == "T")
+                        {
+                            PokemonHandler.AddPokemonToPokemonSprites(dbManager);
+                            break;
+                        }
+                        else
+                        {
+                            Console.WriteLine("\nInvalid choice. Please enter 'S' for Spries or 'T' for Table.");
+                        }
+
                     }
                     else
                     {
